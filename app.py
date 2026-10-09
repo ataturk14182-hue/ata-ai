@@ -189,7 +189,7 @@ def chat():
     req = urllib.request.Request(
         "https://api.groq.com/openai/v1/chat/completions",
         data=payload,
-            headers={
+            headers= {
     "Content-Type": "application/json",
     "Authorization": f"Bearer {api_key}",
     "User-Agent": "ATA-AI/1.0"
