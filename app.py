@@ -190,8 +190,11 @@ def chat():
         "https://api.groq.com/openai/v1/chat/completions",
         data=payload,
         headers={
-            "Content-Type": "application/json",
-            "Authorization": f"Bearer {api_key}"
+            headers={
+    "Content-Type": "application/json",
+    "Authorization": f"Bearer {api_key}",
+    "User-Agent": "ATA-AI/1.0"
+},
         },
         method="POST"
     )
