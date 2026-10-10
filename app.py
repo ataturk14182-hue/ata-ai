@@ -139,9 +139,11 @@ form.addEventListener('submit', async (e) => {
 </html>
 """
 
-@app.route("/")
-def home():
-    return render_template_string(HTML)
+@app.route("/robots.txt")
+def robots():
+    return "User-agent: *\nAllow: /\n", 200, {
+        "Content-Type": "text/plain; charset=utf-8"
+    }
 
 
 @app.route("/chat", methods=["POST"])
