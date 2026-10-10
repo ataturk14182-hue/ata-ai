@@ -146,6 +146,9 @@ def robots():
     }
 
 
+@app.route("/")
+def home():
+    return render_template_string(HTML)
 @app.route("/chat", methods=["POST"])
 def chat():
     api_key = os.environ.get("GROQ_API_KEY")
